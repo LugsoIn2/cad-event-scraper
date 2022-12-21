@@ -17,3 +17,9 @@ Alternatively, you can suppress this by setting city environment variable:
 ### Run script
 
 Run `docker compose up --build` to run the scraper.
+
+## .env file
+AWS_ACCESS_KEY=
+AWS_SECRET=
+#CITIES=
+GOOGLE_EVENTS_URL=
