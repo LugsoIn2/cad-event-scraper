@@ -23,6 +23,9 @@ AWS_ACCESS_KEY=
 AWS_SECRET=
 #CITIES=
 GOOGLE_EVENTS_URL=
+CMD_EXEC='http://chrome:4444/wd/hub' (localhost for Kubernetes)
+EV_TABLE_NAME=
+TEN_TABLE_NAME=
 
 ## Terraform using
 One for all after refactor:

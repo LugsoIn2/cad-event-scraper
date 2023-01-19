@@ -24,9 +24,12 @@ if __name__ == "__main__":
     aws_secret = os.environ.get('AWS_SECRET')
     google_events_url = os.environ.get('GOOGLE_EVENTS_URL')
     cities = os.environ.get('CITIES')
+    cmd_exec = os.environ.get('CMD_EXEC')
+    ev_table_name = os.environ.get('EV_TABLE_NAME')
+    ten_table_name = os.environ.get('TEN_TABLE_NAME')
 
     # DB Service
-    db_service = DBService(aws_key, aws_secret)
+    db_service = DBService(aws_key, aws_secret, ev_table_name, ten_table_name)
 
     # Chrome Driver
     if False:
@@ -36,7 +39,7 @@ if __name__ == "__main__":
     else:
         # Docker
         driver = webdriver.Remote(
-            command_executor='http://chrome:4444/wd/hub',
+            command_executor=cmd_exec,
             desired_capabilities=desired_capabilities.DesiredCapabilities.CHROME
         )
     
