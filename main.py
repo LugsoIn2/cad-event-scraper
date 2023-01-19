@@ -24,6 +24,7 @@ if __name__ == "__main__":
     aws_secret = os.environ.get('AWS_SECRET')
     google_events_url = os.environ.get('GOOGLE_EVENTS_URL')
     cities = os.environ.get('CITIES')
+    cmd_exec = os.environ.get('CMD_EXEC')
 
     # DB Service
     db_service = DBService(aws_key, aws_secret)
@@ -36,7 +37,7 @@ if __name__ == "__main__":
     else:
         # Docker
         driver = webdriver.Remote(
-            command_executor='http://chrome:4444/wd/hub',
+            command_executor=cmd_exec,
             desired_capabilities=desired_capabilities.DesiredCapabilities.CHROME
         )
     
