@@ -23,6 +23,8 @@ services:
     platform: linux/amd64 #ARM => M1 Chip
     networks:
       - selenium
+    env_file:
+      - ./.env
     depends_on:
       chrome:
         condition: service_healthy
