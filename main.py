@@ -25,9 +25,11 @@ if __name__ == "__main__":
     google_events_url = os.environ.get('GOOGLE_EVENTS_URL')
     cities = os.environ.get('CITIES')
     cmd_exec = os.environ.get('CMD_EXEC')
+    ev_table_name = os.environ.get('EV_TABLE_NAME')
+    ten_table_name = os.environ.get('TEN_TABLE_NAME')
 
     # DB Service
-    db_service = DBService(aws_key, aws_secret)
+    db_service = DBService(aws_key, aws_secret, ev_table_name, ten_table_name)
 
     # Chrome Driver
     if False:
