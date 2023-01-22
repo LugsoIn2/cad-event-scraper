@@ -54,7 +54,7 @@ def get_events_for_city(driver, url, city):
             day = event.find_element("xpath",".//div[contains(@class, 'UIaQzd')]")
             month = event.find_element("xpath",".//div[contains(@class, 'wsnHcb')]")
             if day.text and month.text:
-                date = datetime.strptime(day.text + '.' + month.text + '.' + str(datetime.now().year), "%d.%b.%Y").isoformat()
+                date = datetime.strptime(day.text + '.' + month.text + '.' + str(datetime.now().year), "%d.%b.%Y")
 
                 # Get timestring, location, city
                 infos = event.find_elements("xpath",".//div[contains(@class, 'cEZxRc')]")
