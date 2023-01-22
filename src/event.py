@@ -9,7 +9,7 @@ class Event:
         self.eventTimeString = time_string
         self.eventLocation = location
         self.city = city
-        self.ttl = int((date - timedelta(days=1)).timestamp())
+        self.ttl = int((date + timedelta(days=1)).timestamp())
 
     def pretty_print(self):
         print("Title: %s, Date: %s, Timestring: %s, Location: %s, City: %s" %(self.eventTitle, self.eventDate, self.eventTimeString, self.eventLocation, self.city))
