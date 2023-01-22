@@ -25,7 +25,7 @@ def get_events_for_city(driver, url, city):
         day = dateString.text[5:7]
         month = dateString.text[9:12]
 
-        date = datetime.strptime(day + '.' + month + '.' + str(datetime.now().year), "%d.%b.%Y").isoformat()
+        date = datetime.strptime(day + '.' + month + '.' + str(datetime.now().year), "%d.%b.%Y")
         # Time String
         time_string = eventContainer.find_element("xpath",".//div[contains(@class, 'MizEne')]").text
 
