@@ -22,7 +22,7 @@ if __name__ == "__main__":
     load_dotenv()
     aws_key = os.environ.get('AWS_ACCESS_KEY')
     aws_secret = os.environ.get('AWS_SECRET')
-    kula_events_url = os.environ.get('KULA_EVENTS_URL')
+    google_events_url = os.environ.get('GOOGLE_EVENTS_URL')
     cities = os.environ.get('CITIES')
     cmd_exec = os.environ.get('CMD_EXEC')
     ev_table_name = os.environ.get('EV_TABLE_NAME')
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     # Get events for cities in .env file
     for city in cities:
-        events = get_events_for_city(driver, kula_events_url, city)
+        events = get_events_for_city(driver, google_events_url, city)
         for event in events:
             event.pretty_print()
             db_service.upload_to_event_table(event)
