@@ -1,5 +1,5 @@
 from time import sleep
-from src.event import Event
+from models.event import Event
 from datetime import datetime
 from selenium.webdriver import ActionChains
 

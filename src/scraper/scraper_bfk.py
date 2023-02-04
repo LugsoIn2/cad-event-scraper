@@ -1,7 +1,7 @@
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common import desired_capabilities
 from time import sleep
-from src.event import Event
+from models.event import Event
 from datetime import datetime
 
 def call_scraper(driver, url, city):

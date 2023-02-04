@@ -9,7 +9,7 @@ from selenium import webdriver
 from selenium.webdriver.common import desired_capabilities
 import os
 from src.call_scraper import get_events_for_city
-from src.db_service import DBService
+from database.db_service import DBService
 from dotenv import load_dotenv
 import locale
 

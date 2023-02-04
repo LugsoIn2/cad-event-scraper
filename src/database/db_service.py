@@ -1,6 +1,6 @@
 import os
 import boto3
-from src.event import Event
+from models.event import Event
 from boto3.dynamodb.conditions import Key
 
 # Define Dynamo DB
